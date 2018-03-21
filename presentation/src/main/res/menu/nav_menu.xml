@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/action_payment"
+            android:icon="@drawable/ic_credit_card"
+            android:title="@string/payment" />
+
+        <item
+            android:id="@+id/action_message"
+            android:icon="@drawable/ic_earth"
+            android:title="@string/message" />
+
+        <item
+            android:id="@+id/action_help"
+            android:icon="@drawable/ic_question_circle"
+            android:title="@string/help" />
+
+        <item
+            android:id="@+id/action_support"
+            android:icon="@drawable/ic_question_circle"
+            android:title="@string/support" />
+
+        <item
+            android:id="@+id/action_private_policy"
+            android:icon="@drawable/ic_question_circle"
+            android:title="@string/private_policy" />
+
+        <item
+            android:id="@+id/action_terms_and_conditions"
+            android:icon="@drawable/ic_question_circle"
+            android:title="@string/terms_and_conditions" />
+
+        <item
+            android:id="@+id/action_settings"
+            android:icon="@drawable/ic_cog2"
+            android:title="@string/settings" />
+
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/ic_exit_up"
+            android:title="@string/log_out" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_list_main_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_normal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ht_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Bitcoin"
+                android:textColor="#000"
+                android:textSize="@dimen/text_small_body" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ht_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_micro"
+                    android:text="Symbol"
+                    android:textColor="#5AA6DE"
+                    android:textSize="@dimen/text_small_x_body" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ht_price_usd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$36.83"
+                    android:textColor="#EC6E56"
+                    android:textSize="@dimen/text_small_body" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_gravity="top"
+        android:background="#F9F9F9" />
+
+</FrameLayout>

@@ -1,0 +1,80 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    defaultPublishConfig "debug"
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+
+        buildConfigField 'String', 'END_POINT', '"http://45.79.130.223"'
+        buildConfigField 'String', 'STRIPE_PULISHABLE_KEY', '"pk_test_c2GNXuMHseKXqnA3XXkrB83Q"'
+        buildConfigField 'String', 'GOOGLE_API_KEY', '"AIzaSyBquNm1tlI1ujvL1Q6R54w4-pIV-eQd29M"'
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'  // Some libraries have issues with this
+        disable 'OldTargetApi'
+        // Due to Robolectric that modifies the manifest when running tests
+    }
+}
+
+dependencies {
+    def dataDependencies = rootProject.ext.dataDependencies
+    def testDependencies = rootProject.ext.dataTestDependencies
+
+    implementation project(':domain')
+    provided dataDependencies.javaxAnnotation
+    compile dataDependencies.javaxInject
+    compile dataDependencies.okHttp
+    compile dataDependencies.gson
+    compile dataDependencies.rxJava
+    compile dataDependencies.rxAndroid
+    compile dataDependencies.androidAnnotations
+    compile dataDependencies.retrofit2
+
+    annotationProcessor dataDependencies.autoValue
+    compile dataDependencies.autoValue
+
+    compile dataDependencies.gson
+
+    annotationProcessor dataDependencies.ryanharterAutoValue
+    compile dataDependencies.ryanharterAutoValue
+
+    compile dataDependencies.loggingInterceptor
+    compile dataDependencies.jakewhartonRetrofit
+
+    testCompile testDependencies.junit
+    testCompile testDependencies.assertj
+    testCompile testDependencies.mockito
+    testCompile testDependencies.robolectric
+    compile project(path: ':stripe')
+}

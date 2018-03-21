@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_retry"
+    android:background="@color/dim_foreground_disabled_material_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_normal"
+        android:background="@drawable/dialog_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_normal"
+            android:paddingLeft="@dimen/spacing_micro"
+            android:paddingRight="@dimen/spacing_micro"
+            android:paddingTop="@dimen/padding_normal"
+            android:singleLine="true"
+            android:text="@string/exception_something_went_wrong"
+            android:textColor="#465565"
+            android:textSize="@dimen/text_body" />
+
+        <Button
+            android:id="@+id/bt_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_normal"
+            android:background="@drawable/retry_button_background"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_text_retry"
+            android:textAllCaps="false"
+            android:textColor="#3F4D5D"
+            android:textSize="@dimen/text_body" />
+
+    </LinearLayout>
+
+</RelativeLayout>

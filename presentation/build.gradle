@@ -1,0 +1,143 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+        applicationId globalConfiguration["androidApplicationId"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+        testApplicationId globalConfiguration["testApplicationId"]
+
+        buildConfigField 'String', 'COGNITO_POOL_ID', '"us-east-1:1564611d-17c3-492c-a39e-0c20924fe766"'
+        buildConfigField 'String', 'BUCKET_NAME', '"airespotbucket"'
+        buildConfigField 'String', 'AVATAR_HOST', '"https://s3.amazonaws.com/airespotbucket/"'
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+        // Enabling multi dex support.
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'            //Some libraries have issues with this.
+        disable 'OldTargetApi'
+        //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable 'IconDensities'             //For testing purpose. This is safe to remove.
+        disable 'IconMissingDensityFolder'  //For testing purpose. This is safe to remove.
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../buildsystem/debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "google_maps_key",
+                    (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            resValue "string", "google_maps_key",
+                    (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+        }
+    }
+}
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+    def developmentDependencies = rootProject.ext.developmentDependencies
+
+    implementation project(':domain')
+    implementation project(':data')
+    compile project(path: ':stripe')
+
+    annotationProcessor presentationDependencies.daggerCompiler
+    compile presentationDependencies.dagger
+
+    annotationProcessor presentationDependencies.butterKnife
+    compile presentationDependencies.butterKnife
+
+    compile presentationDependencies.appcompat
+    compile presentationDependencies.design
+    compile presentationDependencies.recyclerView
+    compile presentationDependencies.rxJava
+    compile presentationDependencies.rxAndroid
+    provided presentationDependencies.javaxAnnotation
+    compile presentationDependencies.saripaar
+    compile presentationDependencies.calligraphy
+    compile presentationDependencies.glide
+    compile presentationDependencies.itemTouchHelperExtension
+    compile presentationDependencies.playServiceMaps
+    compile presentationDependencies.playServiceLocation
+    compile presentationDependencies.playServicePlaces
+    compile presentationDependencies.playServicePlus
+    compile presentationDependencies.playServiceAuth
+    compile presentationDependencies.androidMapsUtils
+    compile presentationDependencies.aws
+    compile presentationDependencies.fireBaseMessaging
+    compile presentationDependencies.fireBaseDatabase
+
+    androidTestCompile presentationTestDependencies.mockito
+    androidTestCompile presentationTestDependencies.dexmaker
+    androidTestCompile presentationTestDependencies.dexmakerMockito
+    androidTestCompile presentationTestDependencies.espresso
+    androidTestCompile presentationTestDependencies.testingSupportLib
+
+    //Development
+    compile developmentDependencies.leakCanary
+    compile('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+        transitive = true;
+    }
+}
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_normal"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_background"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="@dimen/padding_normal"
+        android:text="Dyson Ball Animal Complete Upright Vacuum with Bonus Tools, Fuchsia (Certified Refurbished)"
+        android:textColor="#797979"
+        android:textSize="@dimen/text_small_body" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.fernandocejas.android10.order.presentation.utils.widgets.SquareImageView
+            android:id="@+id/imv_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_micro"
+            android:layout_weight="1"
+            android:scaleType="centerInside" />
+
+        <com.fernandocejas.android10.order.presentation.utils.widgets.SquareImageView
+            android:id="@+id/imv_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_micro"
+            android:layout_weight="1"
+            android:scaleType="centerInside" />
+
+        <com.fernandocejas.android10.order.presentation.utils.widgets.SquareImageView
+            android:id="@+id/imv_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_micro"
+            android:layout_weight="1"
+            android:scaleType="centerInside" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_add_more_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F5F5F5"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_add_gray" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:background="@drawable/white_background"
+        android:ellipsize="end"
+        android:padding="@dimen/padding_normal"
+        android:text="The Dyson Ball Complete upright vacuum has the strongest suction of any vacuum. It uses Radial Root Cyclone technology and a self-adjusting cleaner head to remove more dirt and microscopic allergens from the home. The brush bar bristles have been made shorter and stiffer allowing deeper carpet penetration to remove more dirt, while maintaining superior performance on hard floors. Ideal for allergy sufferers and pet owners, it has whole machine HEPA filtration and comes with extra cleaning tools."
+        android:textColor="#797979"
+        android:textSize="@dimen/text_small_body" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:background="@android:color/transparent"
+        android:maxLines="1"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:singleLine="true"
+        android:text="ammazon.com"
+        android:textAllCaps="false"
+        android:textColor="#499EDB"
+        android:textSize="@dimen/text_small_body" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:background="#F6F6F6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:text="@string/product_quantity"
+            android:textColor="#D7D7D7"
+            android:textSize="@dimen/text_small_body" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_remove_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/padding_normal"
+                android:src="@drawable/ic_minus_disable" />
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#414141"
+                android:textSize="@dimen/text_small_body" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_add_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/padding_normal"
+                android:src="@drawable/ic_plus_enable" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:background="@drawable/white_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_weight"
+            android:textColor="#D7D7D7"
+            android:textSize="@dimen/text_small_body" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/padding_normal"
+                android:text="kg"
+                android:textColor="#D7D7D7"
+                android:textSize="@dimen/text_small_body" />
+
+            <EditText
+                android:id="@+id/edt_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_unit"
+                android:background="@android:color/transparent"
+                android:gravity="right|center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_normal"
+                android:paddingLeft="@dimen/padding_normal"
+                android:paddingRight="@dimen/spacing_micro"
+                android:paddingTop="@dimen/padding_normal"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#414141"
+                android:textSize="@dimen/text_small_body" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:background="@drawable/white_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_price"
+            android:textColor="#D7D7D7"
+            android:textSize="@dimen/text_small_body" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="numberDecimal"
+                android:paddingRight="@dimen/padding_normal"
+                android:text="$"
+                android:textColor="#D7D7D7"
+                android:textSize="@dimen/text_small_body" />
+
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_currency"
+                android:background="@android:color/transparent"
+                android:gravity="right|center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_normal"
+                android:paddingLeft="@dimen/padding_normal"
+                android:paddingRight="@dimen/spacing_micro"
+                android:paddingTop="@dimen/padding_normal"
+                android:singleLine="true"
+                android:text="0.0"
+                android:textColor="#414141"
+                android:textSize="@dimen/text_small_body" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

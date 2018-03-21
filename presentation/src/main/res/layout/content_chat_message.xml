@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lyt_main_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/imv_avatar">
+
+    <LinearLayout
+        android:id="@+id/lyt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_message_background"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_body" />
+
+        <TextView
+            android:id="@+id/tv_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="17:30"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_small_body" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="17:30"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_small_body" />
+
+    </LinearLayout>
+
+</FrameLayout>

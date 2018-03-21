@@ -1,0 +1,244 @@
+<resources>
+    <string name="app_name">Order Me</string>
+    <string name="url">http://www.android10.org/</string>
+
+    <string name="activity_title_user_list">Users List</string>
+    <string name="activity_title_user_details">User Details</string>
+
+    <string name="btn_text_load_data">Load Sample Data</string>
+    <string name="btn_text_retry">Try again</string>
+
+    <string name="view_text_email">Email:</string>
+    <string name="view_text_followers">Followers:</string>
+    <string name="view_text_description">Description:</string>
+
+    <string name="string_content_description">Non accessible view</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="processing">Processing...</string>
+
+    //Exception messages
+    <string name="exception_message_generic">There was an application error</string>
+    <string name="exception_message_no_connection">There is no internet connection</string>
+    <string name="exception_message_user_not_found">Cannot retrieve user data. Check your internet connection</string>
+    <string name="exception_something_went_wrong">Something went wrong</string>
+
+    //Nav menu
+    <string name="payment">Payment</string>
+    <string name="message">Message</string>
+    <string name="help">Help</string>
+    <string name="support">Support</string>
+    <string name="private_policy">Private policy</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log out</string>
+
+
+    //Network error
+    <string name="error_network_title">SORRY :-(</string>
+    <string name="error_network_message">Looks like we weren\'t able to connect to our server. Please try again in a few minutes.</string>
+    <string name="error_network_try_again">TRY AGAIN</string>
+
+    //Sign In Screen
+    <string name="sign_in_title">Sign in</string>
+    <string name="sign_in_email">EMAIL</string>
+    <string name="sign_in_password">PASSWORD</string>
+    <string name="sign_in_email_hint">Your Email</string>
+    <string name="sign_in_password_hint">Create Your Password</string>
+    <string name="sign_in_action">SIGN IN</string>
+    <string name="sign_in_option">Or Sign In with</string>
+    <string name="sign_in_ask">Do you have an account?</string>
+    <string name="sign_in_sign_up">Sign Up</string>
+
+    //Sign Up Screen
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_name">NAME</string>
+    <string name="sign_up_email">EMAIL</string>
+    <string name="sign_up_phone">PHONE</string>
+    <string name="sign_up_password">PASSWORD</string>
+    <string name="sign_up_password_confirm">PASSWORD CONFIRM</string>
+    <string name="sign_up_action">SIGN UP</string>
+    <string name="sign_up_name_hint">Your Name</string>
+    <string name="sign_up_email_hint">Your Email</string>
+    <string name="sign_up_phone_hint">Your Phone Number</string>
+    <string name="sign_up_password_hint">Create Your Password</string>
+    <string name="sign_up_password_confirm_hint">Retype Your Password</string>
+    <string name="sign_up_action_hint">SIGN UP</string>
+    <string name="sign_up_ask">Do you have an account?</string>
+    <string name="sign_up_sign_in">Login here</string>
+    <string name="sign_up_name_error">Your name required include first name and last name</string>
+    <string name="sign_up_phone_error">Your phone number not valid</string>
+
+    //Activation Screen
+    <string name="activation_title">Verify Phone</string>
+    <string name="activation_notify">We sent you a code to verify your phone number</string>
+    <string name="activation_sent_to">Sent to %s</string>
+    <string name="activation_not_receive_a_code">I didn\'t receive a code!</string>
+    <string name="activation_resend">Resend</string>
+    <string name="activation_confirm">CONFIRM</string>
+    <string name="activation_active_codes_1">1</string>
+    <string name="activation_active_codes_2">2</string>
+    <string name="activation_active_codes_3">3</string>
+    <string name="activation_active_codes_4">4</string>
+    <string name="activation_active_codes_5">5</string>
+    <string name="activation_active_codes_6">6</string>
+    <string name="activation_active_codes_7">7</string>
+    <string name="activation_active_codes_8">8</string>
+    <string name="activation_active_codes_9">9</string>
+    <string name="activation_active_codes_0">0</string>
+
+    //Add URL
+    <string name="add_url_hint">Paste URL or type what you\'re looking for ...</string>
+    <string name="add_url_action">Add</string>
+    <string name="add_url_example">https://www.amazon.com/Dyson-Complete-Upright-Certified-Refurbished/dp/B06Y2BBMP6/ref=br_msw_pdt-4?_encoding=UTF8&amp;smid=A1KWJVS57NX03I&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=EGNFQF2AJ4R4GBJ4GSTB&amp;pf_rd_t=36701&amp;pf_rd_p=730f8a94-3142-4ce7-a837-fe29e12e293f&amp;pf_rd_i=desktop</string>
+
+    //Verify Phone
+    <string name="verify_phone_title">Verify Phone</string>
+    <string name="verify_phone_notify">Enter your phone number to receive a validation code</string>
+    <string name="verify_phone_action">SEND VERIFICATION CODE</string>
+    <string name="phone_code_list_title">Choice your phone code</string>
+
+    //Top website
+    <string name="top_website_cancel">Cancel</string>
+    <string name="top_website_url_default">https://www.google.com/search?q=%s</string>
+    <string name="top_website_invalid_ship_country">Ship country much the same</string>
+    <string name="top_website_invalid_current">Currency much the same</string>
+
+    //Offer List screen
+    <string name="offer_list_no_offer">No Offer</string>
+    <string name="offer_list_offer_cancel">Cancel</string>
+
+    //Product screen
+    <string name="product_title">Product</string>
+    <string name="product_quantity">Quantity</string>
+    <string name="product_weight">Weight</string>
+    <string name="product_price">Price</string>
+    <string name="product_more">MORE</string>
+    <string name="product_next">NEXT</string>
+
+    //Order screen
+    <string name="order_title">ORDER</string>
+    <string name="order_receipt">Receipt</string>
+    <string name="order_total_price">TOTAL PRICE</string>
+    <string name="order_total_items">Total Items</string>
+    <string name="order_item_price">Price</string>
+    <string name="order_sales_tax">Sales Tax</string>
+    <string name="order_traveler_fee">Traveler Fee</string>
+    <string name="order_service_fee">Service Fee</string>
+    <string name="order_buyer_fee">Buyer Fee</string>
+    <string name="order_ship_fee">Ship Fee</string>
+    <string name="order_surcharge_fee">Surcharge Fee</string>
+    <string name="order_other_fee">Other Fee</string>
+    <string name="order_total_fee">Total</string>
+    <string name="order_product_list_title">ORDER ITEMS DETAILS</string>
+    <string name="order_delivery_details">DELIVERY DETAILS</string>
+    <string name="order_date_time_sold">Date &amp; Time Sold</string>
+    <string name="order_address">Address</string>
+    <string name="order_items">Items</string>
+
+
+    <string name="order_address_">Address</string>
+    <string name="order_deliver_information">Deliver Information</string>
+    <string name="order_description">DESCRIPTION</string>
+    <string name="order_where_to_buy">Where to buy</string>
+    <string name="order_submit">SUBMIT</string>
+    <string name="order_submit_information">QUANTITY   %s   %s%s</string>
+    <string name="order_submit_success">Congratulations! Your Order Has Been Successfully created</string>
+    <string name="order_please_choice_address">Please choice</string>
+    <string name="order_description_hint">Type here ...</string>
+    <string name="order_add_address">Add address</string>
+
+    //Offer detail screen
+    <string name="order_detail_title">Order Detail</string>
+    <string name="order_detail_offers">OFFERS</string>
+    <string name="order_detail_notes">NOTES</string>
+    <string name="order_detail_send_message">Send Message</string>
+    <string name="order_detail_confirm">ACCEPT</string>
+    <string name="order_detail_order_number">Order number:</string>
+
+    //Offer detail accepted screen
+    <string name="order_detail_acc_deliver_date">Deliver date</string>
+    <string name="order_detail_acc_payment">Payment</string>
+    <string name="order_detail_acc_receipt">Receipt</string>
+    <string name="order_detail_acc_quantity">Quantity</string>
+    <string name="order_detail_acc_weight">Weight</string>
+    <string name="order_detail_acc_send_message">Send Message</string>
+    <string name="order_detail_acc_receive">RECEIVE</string>
+
+    //Offer Accepted screen
+    <string name="offer_accepted_title">Result</string>
+    <string name="offer_accepted_rating">Ratings</string>
+    <string name="offer_accepted_delivery_date">Delivery date</string>
+    <string name="offer_accepted_payment">Payment</string>
+    <string name="offer_accepted_receipt">Receipt</string>
+    <string name="offer_accepted_quantity">Quantity</string>
+    <string name="offer_accepted_amount">Amount</string>
+    <string name="offer_accepted_weight">Weight</string>
+    <string name="offer_accepted_sale_tax">Sale Tax</string>
+    <string name="offer_accepted_service_fee">Service Fee</string>
+    <string name="offer_accepted_buy_fee">Buy Fee</string>
+    <string name="offer_accepted_ship_fee">Ship Fee</string>
+    <string name="offer_accepted_surcharge_fee">Surcharge Fee</string>
+    <string name="offer_accepted_other_fee">Other Fee</string>
+    <string name="offer_accepted_total_fee">Total</string>
+    <string name="offer_accepted_confirm">CONFIRM</string>
+
+    //Payment screen
+    <string name="payment_title">Payment</string>
+    <string name="payment_method">Payment Methods</string>
+    <string name="payment_add_method">Add Payment Method</string>
+
+    //Add Payment
+    <string name="add_payment_card_number">Card Number</string>
+    <string name="add_payment_exp_date">Exp. Date</string>
+    <string name="add_payment_exp_month">MM</string>
+    <string name="add_payment_exp_year">YY</string>
+    <string name="add_payment_cvv">CVV</string>
+    <string name="add_payment_country">Country</string>
+    <string name="add_payment_save">SAVE</string>
+    <string name="add_payment_card_invalid">Invalid Card Data</string>
+
+    //Setting screen
+    <string name="setting_title">Settings</string>
+    <string name="setting_address">Address</string>
+    <string name="setting_add_address">Add Address</string>
+
+
+    //Add Address
+    <string name="add_address_done">DONE</string>
+    <string name="add_address_create_map_error">Sorry! unable to create maps</string>
+    <string name="no_location_detected"> No location detected. Make sure location is enabled on the device.</string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+
+    //Account Information
+    <string name="account_info_title">Account Information</string>
+    <string name="account_info_your_name">Your Name</string>
+    <string name="account_info_email">Email</string>
+    <string name="account_info_phone_number">Phone Number</string>
+    <string name="account_info_change_password">Change Password</string>
+    <string name="account_info_update">UPDATE</string>
+    <string name="account_info_update_success">Your Profile Has Been Successfully changed</string>
+
+    //Change Password
+    <string name="change_password_title">Change Password</string>
+    <string name="change_password_old_password">Old Password</string>
+    <string name="change_password_new_password">New Password</string>
+    <string name="change_password_confirm_password">Confirm Password</string>
+    <string name="change_password_update">UPDATE</string>
+    <string name="change_password_success">Your Password Has Been Successfully changed</string>
+
+    //Select Image Mode
+    <string name="select_image_mode_title">Select Image</string>
+    <string name="select_image_mode_camera">Camera</string>
+    <string name="select_image_mode_gallery">Gallery</string>
+    <string name="select_image_mode_cancel">Cancel</string>
+
+    //Chat screen
+    <string name="chat_title">Order number</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_hint">Type your message</string>
+
+</resources>

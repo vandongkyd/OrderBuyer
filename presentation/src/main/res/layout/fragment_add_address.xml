@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/padding_normal">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_back"
+            style="@style/AppTheme.IconButton"
+            android:src="@drawable/ic_left_arrow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/top_website_search_background">
+
+            <TextView
+                android:id="@+id/tv_ic_search"
+                fontPath="fonts/Linearicons.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/spacing_micro"
+                android:text="\ue922"
+                android:textSize="@dimen/text_body"
+                tools:ignore="MissingPrefix" />
+
+            <ImageView
+                android:id="@+id/imv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginRight="@dimen/spacing_micro"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:src="@drawable/ic_error_" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/imv_clear"
+                android:layout_toRightOf="@id/tv_ic_search"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:imeOptions="actionSearch"
+                android:inputType="textUri"
+                android:maxLines="1"
+                android:padding="@dimen/spacing_micro"
+                android:singleLine="true"
+                android:textColor="#99999D"
+                android:textSize="@dimen/text_body" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#49CFD8"
+            android:stateListAnimator="@null"
+            android:text="@string/add_address_done"
+            android:textAllCaps="false"
+            android:textColor="#FFF" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_done">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/ic_map_pin" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

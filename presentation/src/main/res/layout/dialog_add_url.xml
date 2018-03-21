@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/padding_normal"
+    android:background="@drawable/dialog_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_normal">
+
+    <EditText
+        android:id="@+id/tv_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@drawable/add_url_input_background"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/add_url_hint"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/padding_normal"
+        android:paddingLeft="@dimen/spacing_micro"
+        android:paddingRight="@dimen/spacing_micro"
+        android:paddingTop="@dimen/padding_normal"
+        android:singleLine="true"
+        android:text="@string/add_url_example"
+        android:textColor="#BEBEBE"
+        android:textSize="@dimen/text_small_body" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_normal"
+        android:background="@drawable/add_url_background"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:stateListAnimator="@null"
+        android:text="@string/add_url_action"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="@dimen/text_body" />
+
+</LinearLayout>
